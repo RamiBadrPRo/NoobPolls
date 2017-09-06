@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlitchyDevs poll</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<style>
+@-webkit-keyframes floatin{
+	0% { margin-top: 2%; }
+	50% { margin-top: 3%; }
+	100% { margin-top: 2%;; }
+}
+.container {
+	height: auto;
+	min-height: 500px;
+	background-color: rgba(200,200,200,.75);
+	float: none;
+    margin: 0 auto;
+	margin-top: 2%;
+	vertical-alrigh: center;	
+	text-align: center;
+	padding: 15px;
+	animation-name: floatin;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.winnerLogo {
+	border: 3px double black;
+	border-radius: 4px;
+	text-align: center;
+}
+</style>
+<div class="container col-lg-6 col-md-6 col-sm-12">
+	<div class="winnerLogo"><img src="" id="winner" height="500px" width="536.4"/></div>
+	<div class="winnerDesc"><h3><strong>Congratulations to <span id="winnerName"></span></strong></div>
+</div>
+<script language="javascript">
+var winnerInfo = [];
+$(document).ready(function() {
+	$.getJSON("getWinner.php",
+		function(data) {
+			for(var i = 0; i<data.length; i++) {
+				winnerInfo.push(data[i]);
+			}
+		});
+});
+$(document).ajaxComplete(function() {
+	$("#winner").attr("src",winnerInfo[0]);
+	$("#winnerName").text(winnerInfo[1]);
+	$.confetti.start();
+});
+</script>
+<script language="javascript" src="res/jquery.confetti.js"></script>
+</body>
+</html>

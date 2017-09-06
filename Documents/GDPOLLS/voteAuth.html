@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlitchyDevs poll</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <style>
+    body {
+      padding: 20%;
+    }
+  </style>
+  <form action="voteAuth.php" method="POST">
+    <div class="form-group" style="text-align:center">
+    <label for="usr"><a href="#" data-toggle="popover" rel><ins style="font-size: 2em">Please insert your Discord username :</ins></a></label>
+    <input type="text" placeholder="Example#0000" class="form-control"name="user" id="usr">
+    </div>
+    <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+  </form>
+<script language="javascript">
+  $(document).ready(function() {
+    $('a[data-toggle=popover]').popover({
+      html: true,
+      trigger: 'hover',
+      content: function () {
+      return '<img src="res/example.jpeg" />';
+      }
+    });
+  })
+</script>
+</body>
+</html>

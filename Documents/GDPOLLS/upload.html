@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlitchyDevs poll</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script language="javascript" src="upload.js"></script>
+</head>
+<body>
+  <style>
+.container {
+  height: 500px;
+  width: 100%;
+  background-color: #eee;
+  padding: 50px;
+
+}
+  </style>
+<div class="jumbotron" style="text-align:center" >
+  <h1 >Upload and Entry</h1>
+  <p>
+    <b>Rules:</b>
+    <br>
+        No Plagiarism<br>
+        No innapropriate Logos<br>
+        Logo size mustn't exceed 2 mb<br>
+        Only .jpeg .jpg .png and .gif files accepted
+  </p>
+</div>
+<div class="container">
+  <div class="alert" id="output"  style="display:none">
+  
+  </div>
+  <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+       <label>Upload the logo :</label>
+       <input type="file" class="form-control" name="logo"/>
+    </div>
+    <div class="form-group">
+      <label>Username:</label>
+      <input type="text" class="form-control" name="user">
+    </div>
+   <input type="submit" value="submit" style="width:100%" name="submit" class="btn btn-primary">
+</form>
+</div>
+</body>
+</html>

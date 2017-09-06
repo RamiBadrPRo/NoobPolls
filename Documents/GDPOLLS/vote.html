@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlitchyDevs poll</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+<style>
+img:hover{cursor:pointer;}
+</style>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>GlitchyDevs Logo contest</h1>
+      <p>The website GlitchyDevs is looking for a logo, and we have decided to make a contest where all members can create a logo and upload it. (Uploads are currently closed) As for the rules, you are allowed to pick as many logos as you like, but you can vote to a logo once. Have fun and no cheating!</p>
+	  <p style="font-size: 16px !important"><i>Some users are facing issues where they can't vote. We're aware of this issue and trying our hardest to resolve it, in the meantime, please private message user : @TAT with your choices.</i></p>
+    </div>
+  </div>
+  <table class="table table-hover table-striped table-bordered" id="entryTable" style="width:100%">
+    <thead>
+      <tr>
+        <th style="width:80%">Logo</th>
+        <th>Creator</th>
+        <th>vote</th>
+      </tr>
+    </thead>
+	<tbody></tbody>
+  </table>
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" data-dismiss="modal">
+      <div class="modal-content"  >              
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+             <img src="" class="imagepreview" style="width: 100%;" >
+        </div> 
+   </div>
+ </div>
+<script language="javascript" src="vote.js"></script>
+</body>
+</html>

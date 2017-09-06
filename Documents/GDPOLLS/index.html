@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlitchyDevs poll</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <style>
+  .options {
+    height: 150px;
+    max-height: 500px;
+    background-color: #bfbfbf;
+    margin: .5%;
+    padding: 10px;
+    text-align: center;
+    transition: all 1s ease;
+    box-sizing: border-box;
+  }
+  .options:hover {
+    background-color: #717171;
+    box-shadow: 3px 4px;
+    cursor: pointer;
+  }
+  .container {
+    margin-left : 25%;
+  }
+  .jumbotron {
+    text-align: center;
+  }
+  </style>
+<div class="jumbotron">
+  <h1 id="countdown"> VOTING IS CLOSED</h1>
+  <p>Click on "Winner" To see who the winner is</p>
+</div>
+<div class="container">
+  <div class="options Vote col-lg-3 col-md-3 col-sm-11 col-xs-11" onclick="location.href='getWinner.html';">
+    <div class="fontPic">
+      <i class="fa fa-trophy fa-5x fontPic" aria-hidden="true"></i>
+    </div>
+    <h3 style="font-color: rgba(53,53,53,1)">Winner</h3>
+  </div>
+  <div class="options Discord col-lg-3 col-md-3 col-sm-11 col-xs-11" onclick="location.href='https://discord.gg/UuZ9MNr';">
+    <div class="fontPic">
+      <img class="fontPic" src="res/discord.png" style="width:70px !important; height=65 !important"/>
+    </div>
+    <h3 style="color: #8c9eff">Our Discord</h3>
+  </div>
+</div>
+
+</body>
