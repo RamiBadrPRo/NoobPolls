@@ -18,10 +18,9 @@ $sql2= "SELECT location,user FROM upload WHERE choiceId='$winnerId';";
 $sqlFetch2 = $conn->query($sql2);
 $sqlReturn2 = $sqlFetch2->fetchall();
 //get how many votes he got
-$sql3 = "SELECT count(*) as cnt from votescasted where choiceId='22';";
+$sql3 = "SELECT count(*) as cnt from votescasted where choiceId='$winnerId';";
 $sqlFetch3 = $conn->query($sql3);
 $sqlReturn3 = $sqlFetch3->fetchall();
-/*array_push($res,$sqlReturn2[0]["location"],$sqlReturn2[0]["user"],$sqlReturn3[0]["cnt"]);
-echo json_encode($res);*/
-print_r($sqlReturn3);
+array_push($res,$sqlReturn2[0]["location"],$sqlReturn2[0]["user"],$sqlReturn3[0]["cnt"]);
+echo json_encode($res);
 ?>
